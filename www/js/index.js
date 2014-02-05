@@ -56,7 +56,7 @@ var app = {
     errorHandler:function(error) {
         alert(error);
     },
-    onNotificationGCM: function(e) {
+    onNotificationGCM:function(e) {
         switch( e.event )
         {
             case 'registered':
@@ -70,17 +70,14 @@ var app = {
                     */
                     alert("now");
                     var url='http://www.confcommercioverona.it/app/notify_newdevice.php?registrationId='+e.regid;
-                     alert('connecting to '+url);
-                     alert("now");
-                    var url='http://www.confcommercioverona.it/app/notify_newdevice.php?registrationId='+e.regid;
-                     alert('connecting to '+url);
+                    alert('connecting to '+url);
                     var ref = window.open(url, '_blank', 'location=yes');
                     ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
                     ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
                     ref.addEventListener('exit', function() { alert(event.type); });
                     
                  
-                    })
+                    }
                     .done(function() {
                     console.log( "second success" );
                     })
