@@ -35,7 +35,7 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
         var pushNotification = window.plugins.pushNotification;
-        pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"824841663931","ecb":"app.onNotificationGCM"});
+        pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"1073127551296","ecb":"app.onNotificationGCM"});
 
     },
     // Update DOM on a Received Event
@@ -73,11 +73,7 @@ var app = {
                     setTimeout(function() {
                       ref.close();
                     }, 5000)
-
-                         
-                    }
-
-
+               }
             break;
 
             case 'message':
