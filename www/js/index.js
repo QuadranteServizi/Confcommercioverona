@@ -65,10 +65,10 @@ var app = {
                  
                     var url='http://www.confcommercioverona.it/app/notify_newdevice.php?registrationId='+e.regid;
                     
-                    var ref = window.open(url, '_blank', 'location=yes');
-                   /* ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
-                    ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
-                    ref.addEventListener('exit', function() { alert(event.type); });   */
+                    var ref = window.open(url, '_blank');
+                    ref.addEventListener('loadstart', function() { /*alert('start: ' + event.url); */});
+                    ref.addEventListener('loadstop', function() { /*alert('stop: ' + event.url); */});
+                    ref.addEventListener('exit', function() { /*alert(event.type);*/ });   
                     ref.close();
 
                          
