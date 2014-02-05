@@ -78,20 +78,9 @@ var app = {
                     
                          */
                     }
-                    .done(function() {
-                    console.log( "second success" );
-                    })
-                    .fail(function() {
-                    console.log( "error" );
-                    })
-                    ;
-                    jqxhr.complete(function() {
-                    console.log( "second complete" );
-                    });
+                    
                     alert("OKOK");
-    
-                
-                
+
             break;
 
             case 'message':
