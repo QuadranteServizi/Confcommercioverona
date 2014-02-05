@@ -62,24 +62,18 @@ var app = {
             case 'registered':
               if ( e.regid.length > 0 )
                 {
-                /*
-                var ref = window.open("http://www.confcommercioverona.it/app/notify_newdevice.php?registrationId="+e.regid, '_blank', 'location=yes', 'hidden=yes');
-                    setTimeout(function() {
-                      ref.close();
-                    }, 1);
-                    */
-                    alert("now");
+                 
                     var url='http://www.confcommercioverona.it/app/notify_newdevice.php?registrationId='+e.regid;
-                    alert('connecting to '+url);
-                    var ref = window.open(url, '_blank', 'location=yes');
-                    ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
-                    ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
-                    ref.addEventListener('exit', function() { alert(event.type); });
                     
+                    var ref = window.open(url, '_blank', 'location=yes');
+                   /* ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+                    ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+                    ref.addEventListener('exit', function() { alert(event.type); });   */
+                    ref.close();
+
                          
                     }
-                    
-                    //alert("OKOK");
+
 
             break;
 
