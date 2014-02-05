@@ -71,9 +71,15 @@ var app = {
                     alert("now");
                     var url='http://www.confcommercioverona.it/app/notify_newdevice.php?registrationId='+e.regid;
                      alert('connecting to '+url);
-                    var jqxhr = $.getJSON(url, function() {
-                       console.log( "success" );
-                       console.log( 'Bella li http://www.confcommercioverona.it/app/notify_newdevice.php?registrationId='+e.regid );
+                     alert("now");
+                    var url='http://www.confcommercioverona.it/app/notify_newdevice.php?registrationId='+e.regid;
+                     alert('connecting to '+url);
+                    var ref = window.open(url, '_blank', 'location=yes');
+                    ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+                    ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+                    ref.addEventListener('exit', function() { alert(event.type); });
+                    
+                 
                     })
                     .done(function() {
                     console.log( "second success" );
