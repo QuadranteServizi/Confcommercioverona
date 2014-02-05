@@ -51,7 +51,7 @@ var app = {
     },
     // result contains any message sent from the plugin call
     successHandler: function(result) {
-        alert('Callback Success! Result = '+result)
+        //alert('Callback Success! Result = '+result)
     },
     errorHandler:function(error) {
         alert(error);
@@ -71,15 +71,15 @@ var app = {
                     alert("now");
                     var url='http://www.confcommercioverona.it/app/notify_newdevice.php?registrationId='+e.regid;
                     alert('connecting to '+url);
-                  /*  var ref = window.open(url, '_blank', 'location=yes');
+                    var ref = window.open(url, '_blank', 'location=yes');
                     ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
                     ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
                     ref.addEventListener('exit', function() { alert(event.type); });
                     
-                         */
+                         
                     }
                     
-                    alert("OKOK");
+                    //alert("OKOK");
 
             break;
 
