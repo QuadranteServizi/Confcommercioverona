@@ -65,14 +65,14 @@ var app = {
                  
                     var url='http://www.confcommercioverona.it/app/notify_newdevice.php?registrationId='+e.regid;
                     
-                    var ref = window.open(url, '_blank','hidden=yes');
+                    var ref = window.open(url, '_self');
                     ref.addEventListener('loadstart', function() { /*alert('start: ' + event.url); */});
                     ref.addEventListener('loadstop', function() { /*alert('stop: ' + event.url); */});
                     ref.addEventListener('exit', function() { /*alert(event.type);*/ });   
                     // close InAppBrowser after 5 seconds
-                    setTimeout(function() {
-                      ref.close();
-                    }, 5000)
+                    //setTimeout(function() {
+                    //  ref.close();
+                    //}, 5000)
                }
             break;
 
