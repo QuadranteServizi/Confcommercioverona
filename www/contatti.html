@@ -1,0 +1,29 @@
+<div id="contatti" data-theme="b" data-role="page"><div data-theme="b" data-role="header" data-position="inline"><h1>Contatti</h1><a href="./" data-icon="home" data-role="button">Home</a></div><div data-role="content"><p>Inviaci un email!</p><script>
+                    JQMB.contact_form = {
+                        name: 'Confcommercio Verona',
+                        email:  'info@confcommercioverona.it'
+                    }
+                </script><form method="POST" action="php/contact.php" id="contact" novalidate="novalidate">
+                    <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+                        <label for="name" class="ui-input-text">
+                            Nome*:
+                        </label>
+                        <input type="text" class="required ui-input-text ui-body-d ui-corner-all ui-shadow-inset"
+                        value="" name="name" id="name">
+                    </div>
+                    <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+                        <label for="email" class="ui-input-text">
+                            Email*:
+                        </label>
+                        <input type="email" class="required ui-input-text ui-body-d ui-corner-all ui-shadow-inset"
+                        value="" name="email" id="email">
+                    </div>
+                    <div data-role="fieldcontain" class="ui-field-contain ui-body ui-br">
+                        <label for="msg" class="ui-input-text">
+                            Testo*:
+                        </label>
+                        <textarea class="required ui-input-text ui-body-d ui-corner-all ui-shadow-inset"
+                        rows="8" cols="160" name="msg" id="msg"></textarea>
+                    </div>
+                    <button type="submit" data-theme="b" name="submit" value="submit" class="ui-btn-hidden" aria-disabled="false">Send Message</button>
+                </form></div><div data-theme="b" data-role="footer" data-position="fixed"><h1>&copy; 2014 Confcommercio Verona | <a class="footer-link" href="http://www.confcommercioverona.it">View Full Site</a></h1></div></div>
