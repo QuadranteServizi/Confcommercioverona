@@ -39,9 +39,9 @@ var app = {
 
 
         //intercetta il back button di android?
-        document.addEventListener("backbutton", function (e) {
+       /* document.addEventListener("backbutton", function (e) {
             e.preventDefault();
-        }, false );
+        }, false );      */
         
         
     },
@@ -72,19 +72,16 @@ var app = {
                  
                     var url='http://www.confcommercioverona.it/app/notify_newdevice.php?registrationId='+e.regid;
                     
-                    var ref = window.open(url, '_self','location=no');
+                    var ref = window.open(url, '_self','hidden=yes');
                     ref.addEventListener('loadstart', function() { /*alert('start: ' + event.url); */});
                     ref.addEventListener('loadstop', function() { /*alert('stop: ' + event.url); */});
                     ref.addEventListener('exit', function() { /*alert(event.type);*/ });   
                     // close InAppBrowser after 5 seconds
-                    //setTimeout(function() {
-                    //  ref.close();
-                    //}, 5000)
+                    setTimeout(function() {
+                      ref.close();
+                    }, 5000)
                     
-                    //provo a farlo rivedere
-                    $(window).on('focus', function() {
-                       ref.show();
-                    });
+                   
                }
             break;
 
