@@ -38,10 +38,45 @@ var app = {
         pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"1073127551296","ecb":"app.onNotificationGCM"});
 
 
-        //intercetta il back button di android?
-       /* document.addEventListener("backbutton", function (e) {
-            e.preventDefault();
-        }, false );      */
+        //--Back button
+        document.addEventListener("backbutton", function(e){
+          if($.mobile.activePage.is('#homepage')){
+              e.preventDefault();
+              navigator.app.exitApp();
+          }
+          else {
+            navigator.app.backHistory()
+          }
+        }, false);
+        //--------------------
+        
+        
+       //--Menu button
+        document.addEventListener("menubutton", onMenuKeyDown, false);
+        
+
+        // Handle the menu button
+        //
+        function onMenuKeyDown() {   
+          alert('menu');
+        }
+        //--------------------
+        
+        //--Search button
+        document.addEventListener("searchbutton", onSearchKeyDown, false);
+
+
+        // Handle the search button
+        //
+        function onSearchKeyDown() {
+         alert('search');
+        }
+        //--------------------
+
+
+
+
+
         
         
     },
