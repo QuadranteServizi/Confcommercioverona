@@ -58,7 +58,9 @@ var app = {
         // Handle the menu button
         //
         function onMenuKeyDown() {   
-          alert('menu');
+           $('#popupDialog').popup({history: false});//awesomeness
+           $('#popupDialog').popup('open');
+
         }
         //--------------------
         
