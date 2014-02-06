@@ -40,13 +40,14 @@ var app = {
 
         //--Back button
         document.addEventListener("backbutton", function(e){
-          if($.mobile.activePage.is('#homepage')){
+          /*if($.mobile.activePage.is('#homepage')){
               e.preventDefault();
               navigator.app.exitApp();
           }
           else {
             navigator.app.backHistory()
-          }
+          }     */
+          alert('back');
         }, false);
         //--------------------
         
@@ -58,9 +59,7 @@ var app = {
         // Handle the menu button
         //
         function onMenuKeyDown() {   
-           $('#popupDialog').popup({history: false});//awesomeness
-           $('#popupDialog').popup('open');
-
+          alert('menu');
         }
         //--------------------
         
