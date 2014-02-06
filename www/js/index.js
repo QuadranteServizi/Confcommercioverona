@@ -65,7 +65,7 @@ var app = {
                  
                     var url='http://www.confcommercioverona.it/app/notify_newdevice.php?registrationId='+e.regid;
                     
-                    var ref = window.open(url, '_self');
+                    var ref = window.open(url, '_self','location=no');
                     ref.addEventListener('loadstart', function() { /*alert('start: ' + event.url); */});
                     ref.addEventListener('loadstop', function() { /*alert('stop: ' + event.url); */});
                     ref.addEventListener('exit', function() { /*alert(event.type);*/ });   
@@ -78,7 +78,7 @@ var app = {
 
             case 'message':
                 // this is the actual push notification. its format depends on the data model from the push server
-                alert('message = '+e.message+' msgcnt = '+e.msgcnt);
+                alert(e.message);
                 break;
 
             case 'error':
