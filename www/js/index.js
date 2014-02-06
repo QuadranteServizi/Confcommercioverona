@@ -37,6 +37,14 @@ var app = {
         var pushNotification = window.plugins.pushNotification;
         pushNotification.register(app.successHandler, app.errorHandler,{"senderID":"1073127551296","ecb":"app.onNotificationGCM"});
 
+
+        //intercetta il back button di android?
+        document.addEventListener("backbutton", function (e) {
+            e.preventDefault();
+        }, false );
+        
+        
+}
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -73,6 +81,11 @@ var app = {
                     //setTimeout(function() {
                     //  ref.close();
                     //}, 5000)
+                    
+                    //provo a farlo rivedere
+                    $(window).on('focus', function() {
+                       ref.show();
+                    });
                }
             break;
 
