@@ -39,5 +39,7 @@
     <icon gap:platform="winphone" gap:role="background" src="res/icon/windows-phone/icon-173.png" />
     <gap:plugin name="com.phonegap.plugins.pushplugin" />
     <gap:plugin name="org.apache.cordova.inappbrowser" />
-    <access origin="http://127.0.0.1*" />
+    <access origin="*" />
+
+
 </widget>
