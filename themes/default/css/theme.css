@@ -165,8 +165,8 @@
 -----------------------------------------------------------------------------------------------------------*/
 
 .ui-bar-b {
-	border: 1px solid #0071bc /*{b-bar-border}*/;
-	background: #0071bc /*{b-bar-background-color}*/;
+	border: 1px solid #3b6887 /*{b-bar-border}*/;
+	background: #3b6887 /*{b-bar-background-color}*/;
 	color: #ffffff /*{b-bar-color}*/;
 	font-weight: bold;
 	text-shadow: 0 /*{b-bar-shadow-x}*/ 1px /*{b-bar-shadow-y}*/ 1px /*{b-bar-shadow-radius}*/ #444444 /*{b-bar-shadow-color}*/;
