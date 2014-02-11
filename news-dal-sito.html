@@ -1,4 +1,4 @@
-<div id="news-dal-sito" data-theme="b" data-role="page"><div data-theme="b" data-role="header" data-position="inline"><h1>News dal sito</h1><a href="./" data-icon="home" data-role="button">Home</a></div><div data-role="content">
+<div id="news-dal-sito" data-theme="b" data-role="page"><div data-theme="b" data-role="header" data-position="inline"><h1>News dal sito</h1><a  href="javascript:history.back()" data-icon="home" data-role="button">Home</a></div><div data-role="content">
 
 <script>  
 if (window.XMLHttpRequest)
@@ -11,9 +11,11 @@ else
   }
 xmlhttp.onreadystatechange=function()
   {
-  if (xmlhttp.readyState==4 && xmlhttp.status==200)
-    {
+   if (xmlhttp.readyState == 4) {
+            if (xmlhttp.status == 200 || xmlhttp.status == 0) {
+
     document.getElementById("rssOutput").innerHTML=xmlhttp.responseText;
+    }
     }
   } 
 xmlhttp.open("GET","http://www.confcommercioverona.it/app/getrss.php?q=news",true);
